@@ -9,7 +9,7 @@ Shader "Custom/SelectiveGlow"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" "Queue"="Overlay" } // Налаштування черги рендерингу
+        Tags { "RenderType"="Opaque" "Queue"="Overlay" }
         LOD 200
 
         Pass
@@ -46,13 +46,11 @@ Shader "Custom/SelectiveGlow"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                // Основний колір текстури
+        
                 fixed4 texColor = tex2D(_MainTex, i.uv) * _Color;
 
-                // Емісійний колір (додається до основного)
                 fixed4 emission = _EmissionColor * _EmissionPower;
 
-                // Повертаємо суму кольорів з HDR для Bloom
                 return texColor + emission;
             }
             ENDCG

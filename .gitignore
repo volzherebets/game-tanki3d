@@ -41,3 +41,14 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+
+###
+# Ignore all shaders except custom ones in Assets/Shaders
+###
+Assets/**/*.shader
+!Assets/Shaders/
+
+###
+# Ignore HLSL files
+###
+*.hlsl

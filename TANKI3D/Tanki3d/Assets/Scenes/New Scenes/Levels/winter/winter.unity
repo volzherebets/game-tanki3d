@@ -1139,6 +1139,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8915681373563541591}
     m_Modifications:
+    - target: {fileID: 793572717110758177, guid: d2890deb5d6c983448e07e61e754f7d5, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: c85a272ddf388094eb3d459f07d66ca3, type: 2}
+    - target: {fileID: 793572717110758177, guid: d2890deb5d6c983448e07e61e754f7d5, type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: c85a272ddf388094eb3d459f07d66ca3, type: 2}
     - target: {fileID: 5054222273252777350, guid: d2890deb5d6c983448e07e61e754f7d5, type: 3}
       propertyPath: m_Name
       value: REDTANK
@@ -5304,6 +5312,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3019306367425557173}
     m_Modifications:
+    - target: {fileID: 1972977640598631137, guid: 226ec968608451d4198dbf1e6d5b7196, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: c85a272ddf388094eb3d459f07d66ca3, type: 2}
+    - target: {fileID: 1972977640598631137, guid: 226ec968608451d4198dbf1e6d5b7196, type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: c85a272ddf388094eb3d459f07d66ca3, type: 2}
     - target: {fileID: 3763114921227996573, guid: 226ec968608451d4198dbf1e6d5b7196, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
