@@ -52,9 +52,11 @@ public class GameManager : MonoBehaviour
 
     private void LoadRandomLevelByTheme()
     {
-        string[] levelNames = MainMenuController.selectedTheme == "HALLOWEEN" ? new string[] { "LVL1H", "LVL2H"} :
+   string[] levelNames = MainMenuController.selectedTheme == "halloween" ? new string[] { "halloween", "halloween 1"} :
+                      MainMenuController.selectedTheme == "winter" ? new string[] { "winter", "winter 1"} :
+                      MainMenuController.selectedTheme == "forest" ? new string[] { "forest", "forest 1"} :
+                      new string[0];
 
-                              new string[0];
 
         if (levelNames.Length > 0)
         {

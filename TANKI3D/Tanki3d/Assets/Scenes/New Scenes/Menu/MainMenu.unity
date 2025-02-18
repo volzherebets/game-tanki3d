@@ -11415,7 +11415,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: STANDART
+          m_StringArgument: forest
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 9126932806943765340}
@@ -45012,7 +45012,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: HALLOWEEN
+          m_StringArgument: halloween
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 9126932806943765340}
@@ -56266,7 +56266,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: NEWYEAR
+          m_StringArgument: winter
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 9126932806943765340}
@@ -76407,7 +76407,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aeb3ea43f79e46c439a06f7e25e0bbaf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ea952891bc319f34ba452e1c222b9b6a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1

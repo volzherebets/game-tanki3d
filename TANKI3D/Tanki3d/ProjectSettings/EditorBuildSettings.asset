@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/New Scenes/Menu/MainMenu.unity
     guid: 2e03ce140d374bb4d8054044e65fa379
+  - enabled: 1
+    path: Assets/Scenes/New Scenes/Levels/forest/forest.unity
+    guid: f2ed9be43f44f6444aba5107367f15be
+  - enabled: 1
+    path: Assets/Scenes/New Scenes/Levels/forest/forest 1.unity
+    guid: 2606b057000f98342a92c8ff46c624e9
+  - enabled: 1
+    path: Assets/Scenes/New Scenes/Levels/halloween/halloween.unity
+    guid: f5b6eb5796f760946a86a9826fd0545d
+  - enabled: 1
+    path: Assets/Scenes/New Scenes/Levels/halloween/halloween 1.unity
+    guid: a2b510f80e53e6d48806c5ec38c5be82
+  - enabled: 1
+    path: Assets/Scenes/New Scenes/Levels/winter/winter.unity
+    guid: 18c5c0fbe9aa2c647b417e7939afdc65
+  - enabled: 1
+    path: Assets/Scenes/New Scenes/Levels/winter/winter 1.unity
+    guid: fc79bb09bda00f34890eb5b2dc478159
   m_configObjects: {}
