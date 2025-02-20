@@ -11313,6 +11313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank1
       objectReference: {fileID: 0}
+    - target: {fileID: 8320803153113433758, guid: 2d78eae2058a063469b7075bb3b8147e, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f1b56dc5e7a7eeb46a9719c0937cd71e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11382,6 +11386,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ad4a023e67c98244494bc4681a782ece, type: 3}
+    - target: {fileID: 2609066603918266032, guid: 5a38d622e86ec7e439887db1e1493a2b, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f1b56dc5e7a7eeb46a9719c0937cd71e, type: 2}
     - target: {fileID: 5363377101517753626, guid: 5a38d622e86ec7e439887db1e1493a2b, type: 3}
       propertyPath: m_Name
       value: Tank2

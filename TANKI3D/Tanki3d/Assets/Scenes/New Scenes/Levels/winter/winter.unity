@@ -1750,6 +1750,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: REDTANK
       objectReference: {fileID: 0}
+    - target: {fileID: 7573361719693015714, guid: d2890deb5d6c983448e07e61e754f7d5, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f1b56dc5e7a7eeb46a9719c0937cd71e, type: 2}
     - target: {fileID: 9206147552658422525, guid: d2890deb5d6c983448e07e61e754f7d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7607,6 +7611,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8409086412217587871, guid: 226ec968608451d4198dbf1e6d5b7196, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f1b56dc5e7a7eeb46a9719c0937cd71e, type: 2}
     - target: {fileID: 8452074588979441333, guid: 226ec968608451d4198dbf1e6d5b7196, type: 3}
       propertyPath: m_Name
       value: REDTANK 1

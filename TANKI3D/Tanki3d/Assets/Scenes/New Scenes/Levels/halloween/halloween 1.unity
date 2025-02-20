@@ -14829,6 +14829,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2133094671464032574, guid: c1a6cad0ee85bf240b55987a889762a8, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f1b56dc5e7a7eeb46a9719c0937cd71e, type: 2}
     - target: {fileID: 4128914250996987657, guid: c1a6cad0ee85bf240b55987a889762a8, type: 3}
       propertyPath: m_Name
       value: Tank1
@@ -16291,6 +16295,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4311402390491193032, guid: bb3fa1b42b0c0094d83966bfefc771a0, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f1b56dc5e7a7eeb46a9719c0937cd71e, type: 2}
     - target: {fileID: 5886962170318841406, guid: bb3fa1b42b0c0094d83966bfefc771a0, type: 3}
       propertyPath: m_Name
       value: Tank2
