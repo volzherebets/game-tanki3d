@@ -54,9 +54,9 @@
 
         private void LoadRandomLevelByTheme()
         {
-            string[] levelNames = selectedTheme == "halloween" ? new string[] { "halloween", "halloween 1"} :
-                                selectedTheme == "winter" ? new string[] { "winter", "winter 1"} :
-                                selectedTheme == "forest" ? new string[] { "forest", "forest 1"} :
+            string[] levelNames = selectedTheme == "halloween" ? new string[] { "halloween", "halloween 1", "halloween 2"} :
+                                selectedTheme == "winter" ? new string[] { "winter", "winter 1", "winter 2"} :
+                                selectedTheme == "forest" ? new string[] { "forest", "forest 1", "forest 2"} :
                                 new string[0];
 
             if (levelNames.Length > 0)

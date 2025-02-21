@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/New Scenes/Levels/winter/winter 1.unity
     guid: fc79bb09bda00f34890eb5b2dc478159
+  - enabled: 1
+    path: Assets/Scenes/New Scenes/Levels/winter/winter 2.unity
+    guid: cbef0b33f08734a46ba2ad3639bf91bb
+  - enabled: 1
+    path: Assets/Scenes/New Scenes/Levels/halloween/halloween 2.unity
+    guid: 4601ad5ffa5188847acf5cd1f21e0d70
+  - enabled: 1
+    path: Assets/Scenes/New Scenes/Levels/forest/forest 2.unity
+    guid: a051881151142fe4997ba814368da6d6
   m_configObjects: {}
