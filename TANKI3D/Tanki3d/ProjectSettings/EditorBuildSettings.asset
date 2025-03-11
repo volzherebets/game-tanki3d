@@ -35,4 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/New Scenes/Levels/forest/forest 2.unity
     guid: a051881151142fe4997ba814368da6d6
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 9b4b0df885b9e9e47abb93a4cb77fa19, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 0e312c2473823b54496c4416ae8c105e, type: 2}

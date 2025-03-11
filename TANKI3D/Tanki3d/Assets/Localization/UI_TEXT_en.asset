@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_TEXT_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 71129338ee138e641a0262099ec381ca, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 32285990912
+    m_Localized: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3521653317632
+    m_Localized: SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3579849285632
+    m_Localized: QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5954953617408
+    m_Localized: TOPIC OF CHOICE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6038441238528
+    m_Localized: AUTUMN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6218959888384
+    m_Localized: SELECT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6329358163968
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7633191116800
+    m_Localized: WINTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7680465117184
+    m_Localized: AUTUMN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8622698733568
+    m_Localized: 'SOUND: ON'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15505580957696
+    m_Localized: 'SOUND: OFF'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15564267659264
+    m_Localized: 'SHADOWS: ON'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15600674217984
+    m_Localized: 'SHADOWS: OFF'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17399741227008
+    m_Localized: 'ANTIALIASING: {0}x'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17451100479488
+    m_Localized: 'LANGUAGE: ENGLISH'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17458583117824
+    m_Localized: 'LANGUAGE: UKRAINIAN'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24750049271808
+    m_Localized: 'BULLETS: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25417002328064
+    m_Localized: GAME PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28377908322304
+    m_Localized: TO BATTLE!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

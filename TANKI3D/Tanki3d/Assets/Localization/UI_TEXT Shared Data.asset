@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI_TEXT Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI_TEXT
+  m_TableCollectionNameGuidString: 71129338ee138e641a0262099ec381ca
+  m_Entries:
+  - m_Id: 32285990912
+    m_Key: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3521653317632
+    m_Key: SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3579849285632
+    m_Key: QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5954953617408
+    m_Key: TOPIC OF CHOICE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6038441238528
+    m_Key: SPRING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6218959888384
+    m_Key: SELECT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6329358163968
+    m_Key: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7633191116800
+    m_Key: WINTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7680465117184
+    m_Key: AUTUMN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8622698733568
+    m_Key: SOUND_ON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15505580957696
+    m_Key: SOUND_OFF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15564267659264
+    m_Key: SHADOWS_ON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15600674217984
+    m_Key: SHADOWS_OFF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17399741227008
+    m_Key: ANTIALIASING_FORMAT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17451100479488
+    m_Key: LANGUAGE_ENGLISH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17458583117824
+    m_Key: LANGUAGE_UKRAINIAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24750049271808
+    m_Key: BULLETS_COUNT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25417002328064
+    m_Key: GAME_PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28377908322304
+    m_Key: FIGHT
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5764684753327882299
+  references:
+    version: 2
+    RefIds:
+    - rid: 5764684753327882299
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1741711420074

@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
             countdownTime--;
         }
 
-        countdownText.text = "FIGHT!";
+        countdownText.text = GetLocalizedString("FIGHT"); // Локалізований текст "FIGHT!"
         yield return new WaitForSeconds(1f);
 
         countdownText.gameObject.SetActive(false);
@@ -52,11 +54,10 @@ public class GameManager : MonoBehaviour
 
     private void LoadRandomLevelByTheme()
     {
-   string[] levelNames = MainMenuController.selectedTheme == "halloween" ? new string[] { "halloween", "halloween 1", "halloween 2"} :
-                      MainMenuController.selectedTheme == "winter" ? new string[] { "winter", "winter 1", "winter 2"} :
-                      MainMenuController.selectedTheme == "forest" ? new string[] { "forest", "forest 1", "forest 2"} :
-                      new string[0];
-
+        string[] levelNames = MainMenuController.selectedTheme == "halloween" ? new string[] { "halloween", "halloween 1", "halloween 2"} :
+                              MainMenuController.selectedTheme == "winter" ? new string[] { "winter", "winter 1", "winter 2"} :
+                              MainMenuController.selectedTheme == "forest" ? new string[] { "forest", "forest 1", "forest 2"} :
+                              new string[0];
 
         if (levelNames.Length > 0)
         {
@@ -95,5 +96,11 @@ public class GameManager : MonoBehaviour
         {
             tank2.GetComponent<TankController>().enabled = true;
         }
+    }
+
+    // Метод для отримання локалізованого рядка
+    private string GetLocalizedString(string key)
+    {
+        return LocalizationSettings.StringDatabase.GetLocalizedString("UI_TEXT", key);
     }
 }

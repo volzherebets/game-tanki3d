@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Audio;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class TankController : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class TankController : MonoBehaviour
     private bool isReloading = false;
     private bool canShoot = true;
     private float fireCooldown = 0.05f;
+
+    // Localization properties
+    private string tableReference = "UI_TEXT";  // Reference to your localization table
 
     void Start()
     {
@@ -144,8 +149,14 @@ public class TankController : MonoBehaviour
     {
         if (bulletCountText != null)
         {
-            bulletCountText.text = "BULLETS: " + currentBullets;
+            string localizedText = GetLocalizedString("BULLETS_COUNT");  // Get localized string
+            bulletCountText.text = string.Format(localizedText, currentBullets);  // Format with current bullets count
         }
+    }
+
+    string GetLocalizedString(string key)
+    {
+        return LocalizationSettings.StringDatabase.GetLocalizedString(tableReference, key);
     }
 
     void ResetInertia()
