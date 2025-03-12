@@ -7,6 +7,7 @@ using TMPro;
 public class MainMenuController : MonoBehaviour
 {
     public GameObject settingsMenu;
+    public GameObject keMenu;
     public GameObject soundButton;
     public GameObject shadowButton;
     public GameObject antiAliasingButton;
@@ -137,10 +138,23 @@ public class MainMenuController : MonoBehaviour
     }
 
     public void CloseSettings()
+{
+    settingsMenu.SetActive(false); // Було keMenu, має бути settingsMenu
+    SetMainMenuButtonsActive(true);
+}
+
+    public void OpenKe()
     {
-        settingsMenu.SetActive(false);
-        SetMainMenuButtonsActive(true);
+        keMenu.SetActive(true);
+        SetMainMenuButtonsActive(false);
     }
+
+    public void CloseKE()
+{
+    keMenu.SetActive(false);  
+    SetMainMenuButtonsActive(true);  
+}
+
 
     public void ToggleSound()
     {

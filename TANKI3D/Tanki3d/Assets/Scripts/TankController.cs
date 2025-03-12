@@ -80,11 +80,11 @@ public class TankController : MonoBehaviour
 
     void HandleShooting()
     {
-        if (gameObject.name == "Tank1" && Input.GetKeyDown(KeyCode.Q))
+        if (gameObject.name == "Tank1" && Input.GetKeyDown(KeyCode.F))
         {
             Shoot();
         }
-        else if (gameObject.name == "Tank2" && Input.GetKeyDown(KeyCode.Space))
+        else if (gameObject.name == "Tank2" && Input.GetKeyDown(KeyCode.RightControl))
         {
             Shoot();
         }

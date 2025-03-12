@@ -79,7 +79,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 17458583117824
-    m_Localized: 'LANGUAGE: UKRAINIAN'
+    m_Localized: "LANGUAGE: UKRAINIAN \U0001F1FA\U0001F1E6\U0001F1FA\U0001F1E6\U0001F1FA\U0001F1E6\U0001F1FA\U0001F1E6\U0001F1FA\U0001F1E6\U0001F1FA\U0001F1E6\U0001F1FA\U0001F1E6\U0001F1FA\U0001F1E6"
     m_Metadata:
       m_Items: []
   - m_Id: 24750049271808
@@ -92,6 +92,39 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 28377908322304
     m_Localized: TO BATTLE!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 307093888638976
+    m_Localized: 'AUTHORS: ZENITSU & REIZ'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309099139244032
+    m_Localized: FORWARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309178071851008
+    m_Localized: SHOT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309160971673600
+    m_Localized: RIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309136871202816
+    m_Localized: BACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309150276198400
+    m_Localized: LEFT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309602644467712
+    m_Localized: 'Remember: your bullets can ricochet off the walls! Use this to
+      catch your opponents from an unexpected angle.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309810585477120
+    m_Localized: CONTROLS
     m_Metadata:
       m_Items: []
   references:
