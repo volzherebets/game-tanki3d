@@ -127,6 +127,10 @@ MonoBehaviour:
     m_Localized: CONTROLS
     m_Metadata:
       m_Items: []
+  - m_Id: 712068506656768
+    m_Localized: SCORE
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

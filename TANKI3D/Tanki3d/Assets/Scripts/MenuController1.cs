@@ -20,18 +20,15 @@ public class MenuController : MonoBehaviour
     private bool areShadowsOn; 
     private int antiAliasingLevel;
     
-    // Localization properties
     private string tableReference = "UI_TEXT";
     
     private void Awake()
     {
-        // Subscribe to the locale changed event
         LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
     }
     
     private void OnDestroy()
     {
-        // Unsubscribe from the event when this object is destroyed
         LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
     }
 
@@ -47,26 +44,22 @@ public class MenuController : MonoBehaviour
         SetAntiAliasing(antiAliasingLevel);
     }
     
-    // Method called when locale is changed
     private void OnLocaleChanged(Locale locale)
     {
         UpdateAllButtonTexts();
     }
     
-    // Helper method to get localized strings by key
     private string GetLocalizedString(string key)
     {
         return LocalizationSettings.StringDatabase.GetLocalizedString(tableReference, key);
     }
     
-    // Update all button texts at once
     private void UpdateAllButtonTexts()
     {
         UpdateSoundButtonText();
         UpdateShadowButtonText();
         UpdateAntiAliasingButtonText();
         
-        // Also update other UI elements like exit buttons if they have text
         if (exitPauseButton != null)
         {
             TMP_Text buttonText = exitPauseButton.GetComponentInChildren<TMP_Text>();
@@ -88,7 +81,6 @@ public class MenuController : MonoBehaviour
 
     public void OpenPauseMenu()
     {
-        Debug.Log("Opening pause menu");
         pauseMenu.SetActive(true);
         SetMainMenuButtonsActive(false);
         Time.timeScale = 0; 
@@ -103,7 +95,6 @@ public class MenuController : MonoBehaviour
 
     public void OpenSettings()
     {
-        Debug.Log("Opening settings menu");
         settingsMenu.SetActive(true);
         pauseMenu.SetActive(false); 
         SetMainMenuButtonsActive(false); 
@@ -212,22 +203,12 @@ public class MenuController : MonoBehaviour
         }
     }
     
-    // Optional: Add language toggle method if needed
     public void ToggleLanguage()
     {
-        // Get current locale
         Locale currentLocale = LocalizationSettings.SelectedLocale;
-        
-        // Get available locales
         var locales = LocalizationSettings.AvailableLocales.Locales;
-        
-        // Find the index of the current locale
         int currentIndex = locales.IndexOf(currentLocale);
-        
-        // Move to the next locale, or back to the first if at the end
         int nextIndex = (currentIndex + 1) % locales.Count;
-        
-        // Set the new locale
         LocalizationSettings.SelectedLocale = locales[nextIndex];
     }
 }

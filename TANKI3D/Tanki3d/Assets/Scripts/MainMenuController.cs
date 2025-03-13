@@ -20,7 +20,6 @@ public class MainMenuController : MonoBehaviour
     private int antiAliasingLevel;
     private bool isUkrainian;
 
-    // Референс до таблиці для локалізації
     private string tableReference = "UI_TEXT";
 
     public static string selectedTheme = "HALLOWEEN";
@@ -32,10 +31,7 @@ public class MainMenuController : MonoBehaviour
         antiAliasingLevel = PlayerPrefs.GetInt("AntiAliasingLevel", 4);
         isUkrainian = PlayerPrefs.GetInt("SelectedLanguage", 0) == 1;
 
-        // Встановлюємо мову
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[isUkrainian ? 1 : 0];
-
-        // Підписуємось на зміну мови, щоб оновити весь UI при зміні
         LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
 
         UpdateAllButtonTexts();
@@ -47,13 +43,11 @@ public class MainMenuController : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Відписуємось від події при знищенні об'єкта
         LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
     }
 
     private void OnLocaleChanged(Locale locale)
     {
-        // Оновлюємо всі тексти при зміні мови
         UpdateAllButtonTexts();
     }
 
@@ -70,10 +64,8 @@ public class MainMenuController : MonoBehaviour
         isUkrainian = !isUkrainian;
         int languageIndex = isUkrainian ? 1 : 0;
 
-        // Міняємо мову у LocalizationSettings
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[languageIndex];
 
-        // Зберігаємо вибір
         PlayerPrefs.SetInt("SelectedLanguage", languageIndex);
         PlayerPrefs.Save();
     }
@@ -93,6 +85,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
+        ScoreManager.ResetScores();
         themeSelectionPanel.SetActive(true);
         SetMainMenuButtonsActive(false);
     }
@@ -128,7 +121,6 @@ public class MainMenuController : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Вихід з гри");
     }
 
     public void OpenSettings()
@@ -138,10 +130,10 @@ public class MainMenuController : MonoBehaviour
     }
 
     public void CloseSettings()
-{
-    settingsMenu.SetActive(false); // Було keMenu, має бути settingsMenu
-    SetMainMenuButtonsActive(true);
-}
+    {
+        settingsMenu.SetActive(false);
+        SetMainMenuButtonsActive(true);
+    }
 
     public void OpenKe()
     {
@@ -150,11 +142,10 @@ public class MainMenuController : MonoBehaviour
     }
 
     public void CloseKE()
-{
-    keMenu.SetActive(false);  
-    SetMainMenuButtonsActive(true);  
-}
-
+    {
+        keMenu.SetActive(false);  
+        SetMainMenuButtonsActive(true);  
+    }
 
     public void ToggleSound()
     {
@@ -227,13 +218,9 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
-    // Допоміжний метод для отримання локалізованого рядка
     private string GetLocalizedString(string key)
     {
-        // Створюємо локалізований рядок
         var localizedString = new LocalizedString(tableReference, key);
-        
-        // Отримуємо поточне значення
         return localizedString.GetLocalizedString();
     }
 

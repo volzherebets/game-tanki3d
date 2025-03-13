@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject tank1;
     public GameObject tank2;
     public TextMeshProUGUI countdownText;
+    public TextMeshProUGUI scoreTextTank1;
+    public TextMeshProUGUI scoreTextTank2;
 
     private bool gameStarted = false;
     private float countdownTime = 3f;
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         DisableTanks();
         StartCoroutine(StartCountdown());
+        UpdateScoreUI();
     }
 
     void Update()
@@ -25,6 +28,19 @@ public class GameManager : MonoBehaviour
         if (gameStarted && (tank1 == null || tank2 == null))
         {
             StartCoroutine(LoadRandomLevelWithDelay());
+        }
+        UpdateScoreUI();
+    }
+
+    void UpdateScoreUI()
+    {
+        if (scoreTextTank1 != null)
+        {
+            scoreTextTank1.text = $"{ScoreManager.Tank1Score}";
+        }
+        if (scoreTextTank2 != null)
+        {
+            scoreTextTank2.text = $"{ScoreManager.Tank2Score}";
         }
     }
 
@@ -37,7 +53,7 @@ public class GameManager : MonoBehaviour
             countdownTime--;
         }
 
-        countdownText.text = GetLocalizedString("FIGHT"); // Локалізований текст "FIGHT!"
+        countdownText.text = GetLocalizedString("FIGHT");
         yield return new WaitForSeconds(1f);
 
         countdownText.gameObject.SetActive(false);
@@ -98,7 +114,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Метод для отримання локалізованого рядка
     private string GetLocalizedString(string key)
     {
         return LocalizationSettings.StringDatabase.GetLocalizedString("UI_TEXT", key);

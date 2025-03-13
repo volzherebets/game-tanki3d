@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Tank2Bullet
+  - Tank1Bullet
+  - Tank1
+  - Tank2
   layers:
   - Default
   - TransparentFX

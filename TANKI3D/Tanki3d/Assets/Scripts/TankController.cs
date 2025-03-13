@@ -20,14 +20,17 @@ public class TankController : MonoBehaviour
     public AudioClip shootSound;
     public AudioMixer gameAudioMixer;
 
+    public ParticleSystem muzzleFlash; 
+
+    public ParticleSystem trailParticles; 
+
     private Rigidbody rb;
     private int currentBullets;
     private bool isReloading = false;
     private bool canShoot = true;
     private float fireCooldown = 0.05f;
 
-    // Localization properties
-    private string tableReference = "UI_TEXT";  // Reference to your localization table
+    private string tableReference = "UI_TEXT"; 
 
     void Start()
     {
@@ -61,6 +64,20 @@ public class TankController : MonoBehaviour
         }
 
         MoveTank(move, rotate);
+
+        if (trailParticles != null)
+        {
+            if (Mathf.Abs(move) > 0.1f)
+            {
+                if (!trailParticles.isPlaying)
+                    trailParticles.Play();
+            }
+            else 
+            {
+                if (trailParticles.isPlaying)
+                    trailParticles.Stop();
+            }
+        }
     }
 
     void MoveTank(float move, float rotate)
@@ -107,28 +124,33 @@ public class TankController : MonoBehaviour
     }
 
     void Shoot()
+{
+    if (currentBullets > 0 && canShoot)
     {
-        if (currentBullets > 0 && canShoot)
+        canShoot = false;
+        StartCoroutine(ShootCooldown());
+
+        if (muzzleFlash != null)
         {
-            canShoot = false;
-            StartCoroutine(ShootCooldown());
-
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Rigidbody rbBullet = bullet.GetComponent<Rigidbody>();
-            rbBullet.velocity = firePoint.forward * bulletSpeed;
-
-            if (audioSource != null && shootSound != null)
-            {
-                audioSource.clip = shootSound;
-                audioSource.outputAudioMixerGroup = gameAudioMixer.FindMatchingGroups("ShootGroup")[0];
-                audioSource.Play();
-            }
-
-            Destroy(bullet, 10f);
-            currentBullets--;
-            UpdateBulletCountUI();
+            muzzleFlash.Play(); 
         }
+
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody rbBullet = bullet.GetComponent<Rigidbody>();
+        rbBullet.velocity = firePoint.forward * bulletSpeed;
+
+        if (audioSource != null && shootSound != null)
+        {
+            audioSource.clip = shootSound;
+            audioSource.outputAudioMixerGroup = gameAudioMixer.FindMatchingGroups("ShootGroup")[0];
+            audioSource.Play();
+        }
+
+        Destroy(bullet, 10f);
+        currentBullets--;
+        UpdateBulletCountUI();
     }
+}
 
     IEnumerator ShootCooldown()
     {
@@ -149,8 +171,8 @@ public class TankController : MonoBehaviour
     {
         if (bulletCountText != null)
         {
-            string localizedText = GetLocalizedString("BULLETS_COUNT");  // Get localized string
-            bulletCountText.text = string.Format(localizedText, currentBullets);  // Format with current bullets count
+            string localizedText = GetLocalizedString("BULLETS_COUNT"); 
+            bulletCountText.text = string.Format(localizedText, currentBullets); 
         }
     }
 

@@ -31,18 +31,26 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Танк знищено!");
             if (explosionPrefab != null)
             {
                 Instantiate(explosionPrefab, collision.transform.position, Quaternion.identity);
             }
             PlaySound(explosionSound, explosionMixerGroup, collision.transform.position);
+            
+            if (collision.gameObject.name == "Tank1")
+            {
+                ScoreManager.IncrementTank2Score();
+            }
+            else if (collision.gameObject.name == "Tank2")
+            {
+                ScoreManager.IncrementTank1Score();
+            }
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {
-            Debug.Log("Рикошет!");
             PlaySound(ricochetSound, ricochetMixerGroup, transform.position);
         }
     }
